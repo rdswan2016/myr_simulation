@@ -1,0 +1,10 @@
+cat <<EOF > requirements.txt
+pandas
+numpy
+scipy
+matplotlib
+jupyter
+gspread
+google-auth
+google-auth-oauthlib
+EOF
