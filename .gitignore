@@ -1,7 +1,5 @@
 # Create the file and add common Python/Jupyter ignores
 cat <<EOF > .gitignore
-*.json
-
 # macOS metadata
 .DS_Store
 
@@ -19,4 +17,7 @@ myr_simulation/
 # Jupyter
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
+
+*.json
+
 EOF
