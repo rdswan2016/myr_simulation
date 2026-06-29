@@ -6,3 +6,4 @@ jupyter
 gspread
 google-auth
 google-auth-oauthlib
+scikit-learn
