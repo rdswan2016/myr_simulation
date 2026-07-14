@@ -1,0 +1,18 @@
+[server]
+sslCertFile = "certs/cert.pem"
+sslKeyFile = "certs/key.pem"
+address = "localhost"
+port = 8501
+headless = true
+maxUploadSize = 50
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#F77F00"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#FCBF49"
+textColor = "#003049"
+font = "sans serif"
