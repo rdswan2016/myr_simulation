@@ -1,0 +1,2 @@
+- [DS-Pool reactor model status](project_dspool_reactor_model.md) — pooled kinetics in 5L notebook, smooth-floor fix, SOP point (0.482mg/mL, 12.96 mL/min, 30min peak); now also has a 1D PDE version (transfer_mass_5L_pde.ipynb)
+- [Numerical debugging feedback](feedback_numerical_debugging.md) — surface tradeoffs and pause before repeated blind numerical patches on ODE bugs
