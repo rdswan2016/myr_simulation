@@ -1,3 +1,8 @@
+---
+name: parameter-estimation
+description: Fitting rate constants and mass-transfer/compartment flow rates to experimental time-series data for stirred-tank-reactor (STR) mechanistic models — compartment-count determination and validation, the parameter-estimation workflow (bounds, initial guesses, multi-start), fit-quality/identifiability diagnostics (Jacobian condition number, profile-likelihood), and how to hand fitted parameters to a downstream model. Use before any new kinetic or transport-parameter fitting, or before choosing a compartment count for a new STR model.
+---
+
 # Parameter estimation for mechanistic bioprocess models
 
 ## 1. When to use this skill
@@ -41,6 +46,14 @@ punt back to the user.
   `Fr_i` across the RPM range of interest before trusting any Nq-derived flow
   number as an RPM-independent impeller property — it usually isn't, and the
   fitted value should be reported as apparent/effective at that specific RPM.
+- **RTD-based experimental validation** (when a tracer or titration curve
+  is available). An N-compartment well-mixed chain has exactly N−1
+  exponential relaxation modes; fit the N-tanks-in-series E(t) formula
+  to the measured impulse-response curve and count visually separable
+  peaks or inflection points. This is the most direct experimental evidence
+  for compartment count and is independent of any geometric heuristic. See
+  `cfd-mixing-fundamentals.md` §5 for the E(t) formulas and how to connect
+  them to the eigenvalue cross-check described in §4 of this file.
 - **Mixing/residence timescale vs. process timescale.** This is the single
   most decisive check for compartment count. Compute each candidate
   compartment's residence time (`V_zone / Q_exchange`) and compare it to the
@@ -86,6 +99,14 @@ punt back to the user.
   bias. Use this to generate a specific, testable hypothesis about where a
   4th (or Nth) compartment belongs — not to justify adding compartments
   generically.
+- **CFD-derived zone identification** (when a CFD simulation is available).
+  Zone boundaries correspond to where the time-averaged axial velocity
+  changes sign. Inter-zone exchange rates Q_ij are extracted by integrating
+  the normal velocity component across the interface plane — this provides
+  a physics-based prior for optimizer bounds that is tighter than a generic
+  Nq_max ceiling from a correlation. Consult `cfd-mixing-fundamentals.md`
+  §3–4 before setting optimizer bounds on Q in any fit where CFD data
+  exists or can be obtained.
 
 ### The decision ladder
 
@@ -102,6 +123,12 @@ punt back to the user.
    right default when you don't yet have mixing data to justify anything
    finer — a 2-zone feed/bulk split is the standard first mechanistic model
    for an STR before you have a titration or tracer curve to fit.
+   Before finalising a 2-compartment model for the feed stage, run the
+   Da-number screening in `cfd-mixing-fundamentals.md` §6 to check whether
+   feed-point micro-mixing is fast enough relative to the local reaction
+   rate that a single exchange coefficient adequately represents the feed
+   zone. If Da_feed > 0.1, a dedicated feed-point compartment is warranted
+   on kinetic grounds, not just on geometric grounds.
 3. **N > 2 compartments (chain topology)** — warranted when the data shows
    multiple relaxation timescales that one exchange coefficient cannot
    reproduce, or when a specific physical mechanism (axial gradient, feed-

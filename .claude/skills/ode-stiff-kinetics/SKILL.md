@@ -1,3 +1,8 @@
+---
+name: ode-stiff-kinetics
+description: Diagnosing and fixing stiff or singular ODE/PDE kinetics — mass-balance violations, a state crossing a physical bound (negative concentration, >100% yield), solver stalls, or blow-up, especially with fractional/near-singular rate-law exponents or rate constants spanning many orders of magnitude. Use whenever a mechanistic ODE/PDE simulation (solve_ivp/odeint/similar) produces implausible output, before applying any fix.
+---
+
 # Debugging stiff / ill-conditioned ODE kinetics
 
 Use this when a mechanistic ODE or PDE simulation (reaction kinetics, transport,
@@ -106,3 +111,15 @@ approaches a physical bound — not just reaction kinetics. Population models
 near extinction, transport models near a saturation limit, and control systems
 near an actuator bound all show the same failure signature (clamp → spurious
 frozen branch; naive continuation → blow-up) and the same fix.
+
+**Coupling with CFD-derived parameters.** When CFD provides spatially-
+varying fields (local concentration gradients, local energy dissipation
+rate ε(x)), reduce those fields to compartment-averaged scalars *before*
+they enter the ODE right-hand side — do not couple a live CFD field to an
+ODE solver in the same integration loop. The correct interface is: CFD
+runs once to produce fixed Q_ij values and zone-averaged ε; the ODE uses
+them as constant parameters. Tight coupling re-introduces stiffness from
+the CFD time step (typically many orders of magnitude shorter than the
+kinetic timescale of interest), defeating all the numerical safeguards
+described above. See `cfd-mixing-fundamentals.md` §4 for the Q_ij
+extraction procedure.

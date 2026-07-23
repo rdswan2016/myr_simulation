@@ -1,3 +1,8 @@
+---
+name: biotech-modeling
+description: Bioprocess modeling judgment for batch/fed-batch bioprocesses — species-resolution choices for kinetic fits (pooled vs. full regiochemistry), fit-versioning/staleness checks, scale-up/scale-down dimensionless-group analysis (Re/Fr/P-V/tip-speed/mixing-time), and forward batch-validation workflow. Use before choosing species resolution for a kinetic fit, before reusing an existing fit artifact, before moving a model between vessel scales, or before validating a mechanistic model against a real batch.
+---
+
 # Bioprocess modeling judgment
 
 ## 1. When to use this skill
@@ -185,6 +190,15 @@ governs:**
   eigenvalue) — the group that actually matters when comparing to the
   reaction's own timescale (§2 of `parameter-estimation.md` covers deriving
   this from fitted compartment flow rates).
+- **Damköhler number at the feed point** (`Da_feed = t_micro / t_reaction_local`) —
+  required when a concentrated reagent is added via pump over a timescale
+  comparable to the macro-mixing time. Da_feed >> 1 means the reaction
+  proceeds faster than micro-mixing can homogenize the feed stream; a
+  feed-zone compartment with its own elevated-concentration rate evaluation
+  is then necessary, not optional. Compute t_micro from the Kolmogorov
+  estimate in `mixing-time-correlations.md` §3 using ε ≈ P/(ρ·V); compute
+  t_reaction_local from the active kinetic fit evaluated at feed-stream
+  concentration, not bulk concentration. See `cfd-mixing-fundamentals.md` §6.
 
 **The scale-down decision ladder — constant N, constant P/V, constant tip
 speed are mutually exclusive; you cannot hold more than one fixed while
@@ -233,6 +247,19 @@ configuration between scales invalidates any Froude-number-derived vortex
 ceiling computed at one scale being reused at the other — baffled and
 unbaffled vessels have qualitatively different `Nq(Fr)` behavior, not just
 different constants.
+
+**CFD as the verification tool for scale-up compartment structure.** The
+impeller swept-zone boundary derivation in current notebooks (geometric
+estimate from impeller height and diameter) is a first-principles
+approximation, not a validated result. At each new scale, check whether
+a CFD simulation — even at low resolution with the k-ε realizable model
+and MRF impeller treatment — confirms the boundary location and gives Q_ij
+values consistent with the geometric estimate. Discrepancies larger than
+~30% between the geometric estimate and CFD-derived Q signal that the
+geometric rule has broken down (discharge jet does not reach the predicted
+boundary; a wall-deflected return flow creates a second recirculation cell).
+See `cfd-mixing-fundamentals.md` §4 for the zone-identification procedure
+and when CFD-derived values should supersede a geometric estimate.
 
 **Illustrative case:** a 5 L reference vessel's validated 3-compartment
 transport model, scaled down to 250 mL with *exact* measured geometry and a

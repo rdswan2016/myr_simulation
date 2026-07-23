@@ -51,10 +51,11 @@ kinetic parameter fitting, and reactor-scale predictive simulation.
   `myr_mechanistic_model_5L_optimized.ipynb`, `myr_mechanistic_model_5L_refined_kinetics.ipynb`,
   `DS_Pool_Kinetic_Model.ipynb`) are kept for history; do not build on them
   without checking whether a newer notebook already supersedes them.
-- Portable skills directory:
-  `/mnt/databiotek/Surya/Code/claude_portable_skills/str` — read the
-  relevant skill file there before doing ODE-debugging or parameter-
-  estimation work (see "Skill files in use" below).
+- Portable skills source:
+  `/mnt/databiotek/Surya/Code/claude_portable_skills/` (`str/` + `str_cfd/`)
+  — synced into this project's own `.claude/skills/` as proper Skills; use
+  the relevant one before doing ODE-debugging, parameter-estimation, or
+  CFD/mixing work (see "Skill files in use" below).
 - `webapp/` is a standalone Streamlit tool with its **own** ODE-simulation
   and least-squares-fitting engine (`webapp/engine/transport_model.py`,
   `model_selection.py`) that independently fits 2/3/4-compartment
@@ -122,31 +123,36 @@ in this project. Key content from Chapter 5 (Computational Fluid Mixing) and
 the mixing-time/correlations chapters has been extracted into the two
 `str_cfd` skill files below.
 
-**At session start, read all skill files listed below before doing any work.**
-Located at `/mnt/databiotek/Surya/Code/claude_portable_skills/`:
-Skills in `str/` (bioprocess judgment, parameter estimation, ODE numerics)
-and `str_cfd/` (CFD mixing, RTD analysis, Da screening):
+These are packaged as proper Claude Code Skills (`SKILL.md` with frontmatter,
+one per folder under `.claude/skills/`), synced from
+`/mnt/databiotek/Surya/Code/claude_portable_skills/` (`str/` = bioprocess
+judgment, parameter estimation, ODE numerics; `str_cfd/` = CFD mixing, RTD
+analysis, Da screening) via that repo's `sync_skills.sh`. They should be
+auto-discovered and listed at session start — invoke by name via the Skill
+tool rather than manually reading the file. **If a skill below does not
+appear in the session's available-skills listing, fall back to reading it
+directly** at `.claude/skills/<name>/SKILL.md` before doing the related work.
 
-- `ode-stiff-kinetics.md` — diagnosing and fixing stiff/singular ODE or PDE
+- `ode-stiff-kinetics` — diagnosing and fixing stiff/singular ODE or PDE
   kinetics (mass-balance violations, solver blow-up/stall, fractional
-  reaction orders near a depletion boundary). Read before touching any
+  reaction orders near a depletion boundary). Use before touching any
   reactor ODE/PDE solve in this repo.
-- `parameter-estimation.md` — methodology for fitting rate constants and
+- `parameter-estimation` — methodology for fitting rate constants and
   mass-transfer/compartment flow rates to experimental data, including how
   to determine and validate STR compartment count, fit-quality/
   identifiability diagnostics, and how to hand a fitted parameter set off
-  to a downstream mechanistic model. Read before any new kinetic or
+  to a downstream mechanistic model. Use before any new kinetic or
   transport-parameter fitting work, or before choosing a compartment count
   for a new STR model.
-- `biotech-modeling.md` — read before any kinetic modeling or scale work.
-- `cfd-mixing-fundamentals.md` — CFD-based zone identification, RTD analysis,
+- `biotech-modeling` — use before any kinetic modeling or scale work.
+- `cfd-mixing-fundamentals` — CFD-based zone identification, RTD analysis,
   macro/meso/micro mixing timescale hierarchy, Damköhler number screening for
   the NHS-Myr feed point, and how to derive compartment exchange rates Q_ij
-  from CFD rather than from a pumping-number correlation. Read before any new
+  from CFD rather than from a pumping-number correlation. Use before any new
   compartment model construction, before accepting Nq-correlation-based Q
   estimates for the unbaffled 5 L vessel, and before concluding that feed-point
   concentration gradients are negligible for the reaction.
-- `mixing-time-correlations.md` — Reference equations for macro-mixing time
+- `mixing-time-correlations` — Reference equations for macro-mixing time
   θ_95, power number Np, pumping number Nq (with Froude correction for the
   unbaffled case), and Kolmogorov/Batchelor micro-mixing timescale estimates.
   Use for Da_feed screening and to cross-check CFD-derived or fitted Q values
