@@ -1,0 +1,117 @@
+{
+  "webapp/app.py": {
+    "mtime": 1784018619.406981,
+    "ast_hash": "99ce4590090aff30eb465d26425ca0c4",
+    "semantic_hash": "99ce4590090aff30eb465d26425ca0c4"
+  },
+  "webapp/engine/__init__.py": {
+    "mtime": 1784018013.180772,
+    "ast_hash": "605dcf615eafc2fceafb07799052f015",
+    "semantic_hash": "605dcf615eafc2fceafb07799052f015"
+  },
+  "webapp/engine/chemistry.py": {
+    "mtime": 1784017843.591079,
+    "ast_hash": "686aebd04375459df4ff4634e05c5313",
+    "semantic_hash": "686aebd04375459df4ff4634e05c5313"
+  },
+  "webapp/engine/geometry.py": {
+    "mtime": 1784017817.330779,
+    "ast_hash": "6b4d2053a130a5765163a3c3a7fcbd53",
+    "semantic_hash": "6b4d2053a130a5765163a3c3a7fcbd53"
+  },
+  "webapp/engine/io_utils.py": {
+    "mtime": 1784017969.9334292,
+    "ast_hash": "d618f6b3655098f626d39ba87caf3fa4",
+    "semantic_hash": "d618f6b3655098f626d39ba87caf3fa4"
+  },
+  "webapp/engine/model_selection.py": {
+    "mtime": 1784017954.6006494,
+    "ast_hash": "525520b509a3c47e1000616bead50744",
+    "semantic_hash": "525520b509a3c47e1000616bead50744"
+  },
+  "webapp/engine/transport_model.py": {
+    "mtime": 1784017882.5454068,
+    "ast_hash": "66284de87d8cacbba886cb885343909b",
+    "semantic_hash": "66284de87d8cacbba886cb885343909b"
+  },
+  "webapp/generate_cert.py": {
+    "mtime": 1784085835.6441116,
+    "ast_hash": "3cce8352ef3702a2613493215a154784",
+    "semantic_hash": "3cce8352ef3702a2613493215a154784"
+  },
+  ".claude/memory/MEMORY.md": {
+    "mtime": 1784510151.610375,
+    "ast_hash": "e2cc1b48aa00648e7a60a63616c03730",
+    "semantic_hash": "e2cc1b48aa00648e7a60a63616c03730"
+  },
+  ".claude/memory/feedback_numerical_debugging.md": {
+    "mtime": 1784510151.522813,
+    "ast_hash": "b91f34650277a1b9f86d1162d0940d75",
+    "semantic_hash": "b91f34650277a1b9f86d1162d0940d75"
+  },
+  ".claude/memory/project_dspool_reactor_model.md": {
+    "mtime": 1784510151.525394,
+    "ast_hash": "47efc6b21b311e90031893c74f8c1044",
+    "semantic_hash": "47efc6b21b311e90031893c74f8c1044"
+  },
+  ".claude/skills/biotech-modeling/SKILL.md": {
+    "mtime": 1784938217.7376463,
+    "ast_hash": "df2f4e3f0ceaa926f48531429defa58c",
+    "semantic_hash": "df2f4e3f0ceaa926f48531429defa58c"
+  },
+  ".claude/skills/cfd-mixing-fundamentals/SKILL.md": {
+    "mtime": 1784938217.7536006,
+    "ast_hash": "0408e163b933650f28f54cf76bcb9845",
+    "semantic_hash": "0408e163b933650f28f54cf76bcb9845"
+  },
+  ".claude/skills/mixing-time-correlations/SKILL.md": {
+    "mtime": 1784938217.7053328,
+    "ast_hash": "4da3ad62f08d7199b3c2e6b1a545732a",
+    "semantic_hash": "4da3ad62f08d7199b3c2e6b1a545732a"
+  },
+  ".claude/skills/ode-stiff-kinetics/SKILL.md": {
+    "mtime": 1784938217.7690086,
+    "ast_hash": "1d9646786567e9b437d6756c2bbebfe3",
+    "semantic_hash": "1d9646786567e9b437d6756c2bbebfe3"
+  },
+  ".claude/skills/parameter-estimation/SKILL.md": {
+    "mtime": 1784938217.7209616,
+    "ast_hash": "12e1875af3afdd583adaf8afe9468513",
+    "semantic_hash": "12e1875af3afdd583adaf8afe9468513"
+  },
+  "CLAUDE.md": {
+    "mtime": 1785122103.0748968,
+    "ast_hash": "361313b779a2ada9df7ed13df9147ea1",
+    "semantic_hash": "361313b779a2ada9df7ed13df9147ea1"
+  },
+  "myr_mechanistic_model_5L_optimized.html": {
+    "mtime": 1782893328.298733,
+    "ast_hash": "d1b0e9ae9224321419365b227160f57f",
+    "semantic_hash": "d1b0e9ae9224321419365b227160f57f"
+  },
+  "requirements.txt": {
+    "mtime": 1782707882.0775242,
+    "ast_hash": "55e15421cfcd20cb917b42a669f78a4e",
+    "semantic_hash": "55e15421cfcd20cb917b42a669f78a4e"
+  },
+  "sync_skills.txt": {
+    "mtime": 1784519952.838065,
+    "ast_hash": "dd044144d14e434efe0eebd239b2b8d8",
+    "semantic_hash": "dd044144d14e434efe0eebd239b2b8d8"
+  },
+  "webapp/README.md": {
+    "mtime": 1784018710.4619863,
+    "ast_hash": "e03ba26e3296686b68d17034707e0dc1",
+    "semantic_hash": "e03ba26e3296686b68d17034707e0dc1"
+  },
+  "webapp/requirements.txt": {
+    "mtime": 1784018215.2539036,
+    "ast_hash": "c440b4c3c8e898db51a163be5acc381b",
+    "semantic_hash": "c440b4c3c8e898db51a163be5acc381b"
+  },
+  "grafik_Nq_vs_RPM.png": {
+    "mtime": 1783572509.2889085,
+    "ast_hash": "afbffa8a414dc98fd54cd959ca48b593",
+    "semantic_hash": "afbffa8a414dc98fd54cd959ca48b593"
+  }
+}

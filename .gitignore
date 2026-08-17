@@ -1,5 +1,3 @@
-# Create the file and add common Python/Jupyter ignores
-cat <<EOF > .gitignore
 # macOS metadata
 .DS_Store
 
@@ -12,12 +10,6 @@ __pycache__/
 venv/
 env/
 .env
-myr_simulation/
 
 # Jupyter
 .ipynb_checkpoints/
-*/.ipynb_checkpoints/*
-
-*.json
-
-EOF

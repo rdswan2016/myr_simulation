@@ -1,6 +1,6 @@
 ---
 name: cfd-mixing-fundamentals
-description: CFD-based mixing analysis for stirred-tank-reactor (STR) compartment modeling — turbulence-model selection (k-epsilon variants, RSM, LES), MRF vs. sliding-mesh impeller modeling, CFD-derived Nq/Np/Q_ij extraction vs. correlation-based values, zone/compartment-boundary identification, RTD-from-CFD analysis, and the macro/meso/micro mixing timescale hierarchy with Damkohler-number feed-point screening. Use before constructing or revising a compartment model, before accepting a pumping-number correlation at face value for a non-standard (e.g. unbaffled) vessel, or before assuming feed-point concentration gradients are negligible.
+description: CFD-based mixing analysis for stirred-tank-reactor (STR) compartment modeling — turbulence-model selection (k-epsilon variants, RSM, LES), MRF vs. sliding-mesh impeller modeling, CFD-derived Nq/Np/Q_ij extraction vs. correlation-based values, zone/compartment-boundary identification, RTD-from-CFD analysis, the macro/meso/micro mixing timescale hierarchy with Damkohler-number feed-point screening, practical snappyHexMesh/transient-scalar-transport pitfalls (STL unit scaling, non-manifold geometry, net-vs-gross flux, solver/timestep choice for transient species transport on a frozen flow field), and moving-mesh transient CFD for a growing liquid volume with a real inlet (prescribed mesh motion vs. VOF, inlet-patch under-resolution, the adjustPhi/pressure-reference trap for a closed domain with net inflow, and mesh-motion-diffusivity corner-shear failures). Use before constructing or revising a compartment model, before accepting a pumping-number correlation at face value for a non-standard (e.g. unbaffled) vessel, before assuming feed-point concentration gradients are negligible, before building/meshing a parametric CFD case or running transient scalar transport on a converged flow field, or before modeling liquid-volume growth/a real feed inlet via mesh motion.
 ---
 
 # CFD-based mixing analysis for STR compartment modeling
@@ -223,7 +223,220 @@ independently check the feed-pipe-exit-to-tip-speed velocity ratio (`v_f/v_t`, r
 minimum ~0.5, some geometries need >2) as a second, purely-geometric red flag for backmixing —
 a low ratio is grounds for a feed compartment even if the Da screening alone looks marginal.
 
-## 7. Portability notes
+## 7. Building parametric STL geometry for snappyHexMesh — pitfalls hit in practice
+
+Lessons from actually building a parametric vessel+impeller mesh from scratch (tank
+wall, torispherical head, shaft, blades) rather than starting from a hand-built
+CAD/tutorial case — each of these produced a mesh that looked superficially fine
+(`checkMesh` reported "Mesh OK", no solver error) but was silently wrong.
+
+- **STL/case unit consistency.** A geometry script working in cm (a natural unit for
+  vessel dimensions) writing STL vertices directly, dropped into an OpenFOAM case built
+  in metres (`blockMeshDict`, `MRFProperties`, `locationInMesh`), makes the STL ~100x
+  too large relative to the mesh domain. The background box then sits entirely *inside*
+  the (apparently enormous) wall surface — nothing outside it is ever excluded, so
+  `checkMesh` reports the *entire* background box as the fluid domain, with no error at
+  any stage. Fix: `scale 0.01` (or whatever the actual ratio is) on each
+  `triSurfaceMesh` entry's import in `snappyHexMeshDict`, not a unit conversion inside
+  the STL-writing code itself (keeps the geometry script's native unit and the mesh
+  case's unit independently sane, converting only at the one interface between them).
+  **Diagnostic**: if the meshed domain's `checkMesh` bounding box/volume matches the
+  *background box* dimensions rather than the intended vessel dimensions, suspect this
+  first, before suspecting the castellation/snapping settings.
+- **Non-manifold coincident vertices break the inside/outside flood fill.** A rotating
+  shaft modeled as a surface-of-revolution cone down to a single point on the axis
+  (instead of a constant-radius cylinder) put that point exactly coincident with the
+  vessel bottom cap's own centre vertex — a different surface's vertex landing exactly
+  on top of another. This kind of single-point non-manifold junction let
+  `castellatedMesh`'s locationInMesh-based region split leak between what should be two
+  disconnected regions. Model rotating shafts as genuine constant-radius cylinders (both
+  end profile points at the same radius), never tapering to a point that could coincide
+  with another surface's vertex.
+- **Zero-thickness "sheet" obstacles are unreliable for a plain `wall`
+  refinementSurface.** A flat impeller blade built as a single 2-triangle rectangle (no
+  back face, no defined inside/outside) caused the mesh's inside/outside region count to
+  fragment into tens of thousands of tiny regions mid-refinement, later merging back into
+  one region that included the entire background box. Model any internal obstacle
+  (blade, baffle meant as a real solid, not a genuine zero-thickness baffle patch) as a
+  closed thin box (6 faces), not a single flat surface — a true zero-thickness baffle
+  needs OpenFOAM's dedicated `createBaffles` mechanism, not a plain `wall`
+  refinementSurface.
+- **Mesh domain extent for a vessel with a curved bottom head must reach the true apex,
+  not an intermediate reference plane.** Using the head/cylinder tangent line (a
+  natural-seeming "where the straight wall starts" reference) as the mesh's lower z
+  bound instead of the true geometric bottom silently clipped out nearly the entire head
+  volume — the background box simply never extended down that far, so nothing there was
+  ever castellated. **Diagnostic that catches this directly**: compare the meshed
+  volume (`checkMesh`'s reported total volume) against the vessel's known liquid volume
+  before trusting the mesh for anything — a ~10% shortfall for a vessel with a
+  proportionally-sized head is exactly this bug's signature. This is the mass-balance-
+  validation practice applied to geometry, before ever getting to a transport quantity.
+- **Refinement levels don't port between scales at face value.** The same absolute
+  surface-refinement levels, on the same background-block resolution (~40 cells across
+  the vessel regardless of its physical size), gave a 1.1M-cell mesh for a 5 L vessel and
+  a 3.7M-cell mesh for a geometrically similar 250 mL vessel — the smaller vessel's
+  background cells are proportionally smaller in absolute terms, so the *same* level
+  count over-resolves it. Scale refinement levels down (and/or the global cell-count cap)
+  for smaller vessels rather than reusing a larger scale's settings verbatim; a rough
+  rule that worked here was one fewer level across the board below roughly half the
+  reference vessel's characteristic radius.
+
+## 8. Transient scalar transport on a frozen MRF flow field — numerics and setup
+
+Extends §5's frozen-flow-field shortcut (converge the flow once, disable
+momentum/turbulence, solve only the scalar) with the concrete validation and numerics
+that made it trustworthy and fast enough to actually run in practice.
+
+- **Validate with the exact conserved quantity, every time, not just "it didn't
+  crash."** Check the transported scalar's volume integral over the whole domain against
+  (source strength × elapsed time) at multiple points during the run. This caught real
+  setup mistakes early (see below) and, once passing to <1%, was strong enough evidence
+  to trust the frozen-field shortcut's other outputs (probe time series, 3D snapshots)
+  without further scrutiny.
+- **Confirm the source region actually contains fluid cells before running, don't
+  assume it.** A feed/source region (e.g. `fvOptions`' `scalarSemiImplicitSource`) that
+  lands on a solid internal (a shaft occupying the vessel centreline) or straddles the
+  domain boundary silently selects zero cells — the solver prints a `No cells selected!`
+  warning and then crashes with a floating-point exception the moment it tries to divide
+  the source strength by that region's (zero) volume. Query the mesh's actual cell
+  centres directly (e.g. via a mesh-reading library) against the intended source
+  geometry *before* running, not after hitting the crash. This is also the reason an
+  on-axis feed point is often not a safe default in a stirred vessel: the impeller shaft
+  usually occupies exactly that region.
+- **Net vs. gross flux, worked concrete recipe** (extends §4's warning with the actual
+  method, since the Handbook itself doesn't give one): for a closed, recirculating
+  vessel, the *net* flux through an internal interface plane is ~zero by continuity
+  (confirmed directly: computed net flux ~1e-5 relative to a resolved circulation of
+  several L/min) — fluid crosses the plane in both directions as part of the
+  recirculation loop. The compartment model's exchange flow `Q_ij` is the **gross**,
+  one-directional flow: slice the domain at the interface plane, integrate *only* the
+  positive (or only the negative) normal-velocity component over it, and use that as
+  `Q_ij` — never the net integral a generic flux-integration function object reports by
+  default.
+- **Solver choice matters far more here than for a steady RANS solve.** A local smoother
+  (GaussSeidel) needed on the order of 1000 sweeps per implicit step to converge a
+  transient scalar equation on a ~500k-1M-cell mesh — a local smoother propagates
+  information too slowly across a large mesh within one implicit step. Switching to a
+  proper Krylov solver (PBiCGStab with a DILU preconditioner) cut that to ~20-100
+  iterations at the same tolerance. Benchmark wall-time-per-simulated-second directly
+  across a few candidate timesteps rather than assuming smaller is always more efficient
+  — in one case a 2 s step was more wall-time-efficient than a 0.2 s step overall, since
+  the Krylov iteration count did not grow proportionally with step size, despite the
+  local Courant number reaching the thousands near the impeller. `adjustTimeStep` was
+  tried first and behaved unreliably for this solver (jumped straight to a much larger
+  step than the requested Courant target, repeatably) — prefer a benchmarked fixed step
+  over trusting automatic step control blindly, at least until its behavior for the
+  specific solver in use has been separately verified.
+- **The transport diffusivity for a species riding on an already-resolved velocity field
+  should come from the local turbulence field, not a lumped model's exchange-flow
+  parameter.** `DT ≈ nut/Sc_t` (turbulent Schmidt number ~0.7, from the converged flow's
+  own turbulent viscosity field) is the right scale for the sub-grid/molecular mixing
+  still needed on top of a resolved velocity field. A lumped compartment model's
+  `D_eff` (derived from an exchange flow rate, e.g. `D_eff = Q·Δz/A`) is typically an
+  order of magnitude or more larger, because it was standing in for the *entire*
+  unresolved advective exchange — reusing it once the real velocity field already
+  provides that advection double-counts the same transport.
+
+## 9. Moving-mesh transient CFD with a real inlet — modeling a growing liquid volume
+
+Lessons from replacing a frozen-flow-field + interior-source-term setup (§8) with a
+single transient run that resolves actual liquid-volume growth (a rising free surface)
+and a real advective inlet, without going as far as a full VOF two-phase solve.
+
+- **Prescribed mesh motion, not VOF, is the right first move when only the liquid phase
+  matters.** If nothing about the air phase itself needs modeling (no interest in its
+  velocity/pressure field, just where the liquid goes), a single-phase domain whose top
+  boundary rises via a *prescribed* kinematic law (`dynamicMotionSolverFvMesh` +
+  `displacementLaplacian`, driven by a known `V(t)`/`dV/dt`) is far cheaper and lower-risk
+  than resolving two phases and a captured interface — at the cost of not modeling the
+  actual free-surface shape (sloshing, meniscus). Reach for VOF only once the air phase's
+  own behavior, or the interface shape itself, actually matters to the question being asked.
+- **Don't pre-mesh headroom the moving-mesh case doesn't need.** A tempting-looking shortcut
+  — extend the initial mesh domain up into the vessel's reserved freeboard "so the rising
+  boundary has somewhere to go" — is wrong for this approach specifically: prescribed
+  mesh motion *deforms existing cells*, it doesn't add new ones, so the mesh only needs to
+  start at the true initial liquid height and stretch a few cm over the run. Extending it
+  upfront silently solves the whole freeboard volume as liquid from t=0, inflating the
+  starting liquid volume by whatever the freeboard fraction adds (this is exactly the kind
+  of thing a VOF air-phase region would need, but a single-phase prescribed-motion domain
+  does not). **Diagnostic**: compare mesh volume against the *known initial* liquid volume
+  (not the final one) at t≈0 — a many-percent excess right at the start, not building up
+  over time, is this bug specifically (contrast with real transport losses, which usually
+  show up as a trend, not an offset present from the first timestep).
+- **A real inlet patch's actual meshed area can differ substantially from its nominal
+  geometric area at coarse refinement — verify it, don't assume it.** A small feed-inlet
+  patch sized and given a `fixedValue` velocity based on its intended geometric
+  area/flow-rate came out, once actually meshed at a coarsened refinement level, at only
+  ~36% of that nominal area — silently injecting the tracked species at ~36% of the real
+  rate, with no error or warning anywhere (the BC values themselves were exactly as
+  specified; only the *count of faces actually carrying them* was short). **Diagnostic**:
+  after meshing, read the actual patch back (e.g. via a mesh-reading library, summing face
+  areas) and compare to the geometric area used to derive the prescribed velocity — this
+  is a direct, cheap check worth doing for *any* small/localized boundary feature on a
+  coarsened mesh, and it's exactly the same category of check as verifying total meshed
+  volume against known liquid volume (§7), just applied to a boundary patch instead of the
+  whole domain. **Fix**: refine just that one small feature's surface level independently
+  of the rest of the (deliberately coarsened) mesh — refining a tiny, localized patch barely
+  changes total cell count, unlike refining a large region such as the impeller zone.
+- **A closed domain with a genuine net inflow (no real outlet) needs a real pressure
+  reference — this is a distinct issue from moving vs. static mesh.** With every boundary
+  patch's velocity fully prescribed (no-slip walls, rotating walls, a fixed-value inlet)
+  and every pressure patch left `zeroGradient`, OpenFOAM's `adjustPhi` continuity check
+  (triggered whenever `p.needReference()` is true, i.e. no patch fixes an absolute pressure
+  value) has no way to reconcile a real net inflow against a domain with no outlet, and
+  hard-fails on the very first timestep ("Continuity error cannot be removed by adjusting
+  the outflow") — **regardless of whether the mesh is moving**, and this failure mode is
+  easy to misdiagnose as a moving-mesh-specific problem when it isn't. The fix is to give
+  **one** patch (here, the rising top boundary) a genuine `fixedValue` pressure (physically
+  reasonable for a free surface, which is close to atmospheric/kinematic-zero pressure) —
+  once `p` has a real reference, the *velocity* type at that same patch can still correctly
+  be a true moving no-slip wall (`movingWallVelocity`, zero relative flow), which is both
+  the physically correct choice (100% of the volume growth is then correctly attributed to
+  the real inlet, matching reality: nothing actually flows out of a rising, closed vessel)
+  and avoids a subtler trap: a first attempt used a bidirectional "vent" velocity BC
+  (`pressureInletOutletVelocity`) specifically to give `adjustPhi` a patch to balance
+  against — it ran without error, but let species mass genuinely leak out through whatever
+  fraction of that vent had locally-outward flow at any given moment (confirmed directly:
+  a mass-balance check that should read ~100% instead read ~35-45% and was *still falling*
+  over time, not a one-time startup transient). A working fix must both run without error
+  *and* pass the same mass-balance validation as everything else in this skill file —
+  "no error" alone did not mean "correct" here.
+- **`correctPhi yes` is required in `PIMPLE{}` for any `dynamicFvMesh` case** — without it,
+  the flux isn't corrected for the mesh's own motion at the first sub-step of every mesh
+  update. This is a one-line, easy-to-miss setting distinct from the pressure-reference fix
+  above; both were needed together.
+- **Mesh-motion diffusivity can concentrate deformation right at a rigid/moving patch
+  junction, tearing a cell there — this one was not fully solved.** Using
+  `inverseDistance(<moving patch>)` diffusivity (to protect an already-refined region
+  elsewhere in the mesh from motion-related distortion) concentrates nearly all the
+  prescribed deformation into the single cell layer nearest that moving patch. Exactly at
+  the corner where that moving patch meets a *fixed* (zero-displacement) patch, this
+  produced a severely sheared cell and a turbulence-field blowup (`epsilon` diverging past
+  1e6, eventually 1e32) within about one second of simulated time for one vessel's mesh,
+  and a much-delayed but likely related stall for a different vessel's mesh at the same
+  scaling of that corner. Two follow-up attempts — lowering the Courant cap plus adding a
+  non-orthogonality corrector, then switching to spatially-`uniform` diffusivity (spreading
+  deformation over the whole domain instead of concentrating it) — each ran further but
+  neither fully resolved it. Per this project's diagnostic-first practice: after a second
+  fix attempt didn't obviously work, this was surfaced as an open tradeoff rather than
+  guessed at a third time. **If revisiting this**: a spatially-varying custom diffusivity
+  that specifically tapers deformation to zero right at a rigid-patch/moving-patch shared
+  edge (rather than either a globally uniform or a single-patch-referenced
+  inverse-distance field), or local mesh refinement concentrated at that specific edge, or
+  accepting VOF (which has no such edge at all, since the interface itself is resolved
+  rather than a kinematic constraint imposed on the mesh) are the more promising directions
+  — not a third guess at a stock diffusivity keyword.
+- **Wall-clock feasibility for transient MRF + mesh motion is a real, separate constraint
+  from getting the physics right.** A mesh sized for steady-state accuracy (§7's guidance)
+  can be 2-3 orders of magnitude too expensive for a transient run needing thousands of
+  timesteps — a first attempt at steady-state-equivalent refinement measured multiple
+  *days* of wall-clock to reach a feed duration of ~145 s of simulated time. Coarsening
+  every refinement level (roughly by half) and the background mesh cut cell count ~6x and
+  improved throughput ~40x. Benchmark actual physical-seconds-per-wall-clock-second
+  directly on the coarsened mesh before committing to a multi-hour run, the same way §8
+  already recommends benchmarking solver/timestep choice — don't assume a scaling factor.
+
+## 10. Portability notes
 
 **Changes between projects:** vessel geometry (baffled/unbaffled, H/T, C/D), impeller type and
 pumping direction, RPM range, feed-stream concentration relative to bulk, feed-line velocity
@@ -241,4 +454,7 @@ apologize for; MRF as the default steady-state tool for Nq/Np/Q_ij extraction, e
 sliding mesh only for a specific suspected transient/periodic effect; and using CFD-derived
 Nq/Np/Q_ij as a drop-in replacement wherever a standard correlation's validity conditions
 (baffling, C/D, H/T, impeller spacing, Re_i) are not met, without changing anything else about
-the downstream Re/Fr-regime-check or compartment-fitting workflow.
+the downstream Re/Fr-regime-check or compartment-fitting workflow; and defaulting to an
+**executed Jupyter notebook** (numerical results and plots baked in as actual cell outputs,
+not just described in prose) as the deliverable for CFD/simulation work — a written summary
+alone is not the expected format for this class of task.

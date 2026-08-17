@@ -1,0 +1,2 @@
+sync skills in this project to the one in `claude_portable_skills` file using this command:
+bash /mnt/databiotek/Surya/Code/claude_portable_skills/sync_skills.sh
