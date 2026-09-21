@@ -1,0 +1,30 @@
+# Surya Knowledge Graph - shared exclusions (per-project, applied 2026-08-16)
+
+# Hard security exclusions - never index credentials/secrets
+credentials*.json
+token*.json
+*secrets*
+*.pem
+*.key
+
+# Raw data, not authored source - keeps the graph about reasoning, not datasets
+*.csv
+
+# Model checkpoints / binary artifacts - not source
+*.pkl
+*.dill
+*.h5
+
+# Chart/image outputs - skipped per decision to avoid vision-extraction cost
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.gif
+*.webp
+
+# Jupyter noise
+.ipynb_checkpoints/
+
+# OS noise
+.DS_Store

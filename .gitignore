@@ -13,3 +13,6 @@ env/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# graphify notebook-flattening staging (not source, regenerable)
+graphify-out/
