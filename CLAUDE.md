@@ -40,6 +40,12 @@ kinetic parameter fitting, and reactor-scale predictive simulation.
   reaction's timescale.
 - `transfer_mass_5L_pde.ipynb` — 1D axial reaction-diffusion PDE version of
   Stage 2 (dosed NHS-Myr feed + reaction).
+- `ringkasan_eksekutif_myristoylasi.{tex,pdf}` + `figs_ringkasan/` — one-page
+  Indonesian executive summary (25 Sep 2026) of the kinetics + CFD mixing +
+  profitability results for non-technical readers. Figures are copies of
+  those from `str_mass_transfer` (RANS fit comparison) and `gmp-3500l`
+  (profitability scenarios); refresh them there, then re-copy.
+- `.mcp.json` — registers the `graphify` MCP server over `graphify-out/graph.json`.
 - `scale_down_250mL.ipynb` — 250 mL scale-down transfer-mass/mixing model
   (mixing physics only, no reaction kinetics), torispherical head geometry.
 - `pra5_myr_model.ipynb` — forward-predictive (non-optimized) simulation
