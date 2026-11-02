@@ -80,9 +80,9 @@
     "semantic_hash": "12e1875af3afdd583adaf8afe9468513"
   },
   "CLAUDE.md": {
-    "mtime": 1785122103.0748968,
-    "ast_hash": "361313b779a2ada9df7ed13df9147ea1",
-    "semantic_hash": "361313b779a2ada9df7ed13df9147ea1"
+    "mtime": 1793606153.1278424,
+    "ast_hash": "07b8e440bbdb86378a46a25c73f60d85",
+    "semantic_hash": "07b8e440bbdb86378a46a25c73f60d85"
   },
   "myr_mechanistic_model_5L_optimized.html": {
     "mtime": 1782893328.298733,
@@ -109,11 +109,6 @@
     "ast_hash": "c440b4c3c8e898db51a163be5acc381b",
     "semantic_hash": "c440b4c3c8e898db51a163be5acc381b"
   },
-  "grafik_Nq_vs_RPM.png": {
-    "mtime": 1783572509.2889085,
-    "ast_hash": "afbffa8a414dc98fd54cd959ca48b593",
-    "semantic_hash": "afbffa8a414dc98fd54cd959ca48b593"
-  },
   ".claude/settings.json": {
     "mtime": 1785122103.0926063,
     "ast_hash": "44621a1d8b5ea3303d751526f6c74d18",
@@ -128,5 +123,65 @@
     "mtime": 1785122191.0311267,
     "ast_hash": "0a7fe7d58e4874b6fa080dd95a33bbd7",
     "semantic_hash": "0a7fe7d58e4874b6fa080dd95a33bbd7"
+  },
+  "_notebook_md/DS_Pool_Kinetic_Model.md": {
+    "mtime": 1793606152.6641178,
+    "ast_hash": "a81102cbe676fa0a269c61ad740a4cf2",
+    "semantic_hash": "a81102cbe676fa0a269c61ad740a4cf2"
+  },
+  "_notebook_md/DS_Pool_Kinetic_Model_Refined.md": {
+    "mtime": 1793606152.6704197,
+    "ast_hash": "3259731cc062a4c33ced547dbd027afd",
+    "semantic_hash": "3259731cc062a4c33ced547dbd027afd"
+  },
+  "_notebook_md/HydrolysisKineticModel.md": {
+    "mtime": 1793606152.6768095,
+    "ast_hash": "988f5bdea9bd6c7ec4c1fab4d6478952",
+    "semantic_hash": "988f5bdea9bd6c7ec4c1fab4d6478952"
+  },
+  "_notebook_md/HydrolysisKineticModel_FIXED.md": {
+    "mtime": 1793606152.6833746,
+    "ast_hash": "5c29cf98e07a357f8002ea6d646f5fc7",
+    "semantic_hash": "5c29cf98e07a357f8002ea6d646f5fc7"
+  },
+  "_notebook_md/Kinetika.md": {
+    "mtime": 1793606152.6898904,
+    "ast_hash": "08b8961e89eda659ca62d9178f59bb2e",
+    "semantic_hash": "08b8961e89eda659ca62d9178f59bb2e"
+  },
+  "_notebook_md/dataprep_rx_kinetic.md": {
+    "mtime": 1793606152.696313,
+    "ast_hash": "ec44d22b5fa59cff2d6b0e5e266e2d84",
+    "semantic_hash": "ec44d22b5fa59cff2d6b0e5e266e2d84"
+  },
+  "_notebook_md/kinetika2.md": {
+    "mtime": 1793606152.7024565,
+    "ast_hash": "567d46f45f63858df3b60c9e93c81777",
+    "semantic_hash": "567d46f45f63858df3b60c9e93c81777"
+  },
+  "_notebook_md/myr_mechanistic_model_5L.md": {
+    "mtime": 1793606152.7088566,
+    "ast_hash": "1f1bc10d68555070837588d302ea13b8",
+    "semantic_hash": "1f1bc10d68555070837588d302ea13b8"
+  },
+  "_notebook_md/myr_mechanistic_model_5L_optimized.md": {
+    "mtime": 1793606152.7155101,
+    "ast_hash": "3260fb967452b2a54904073be8b1929a",
+    "semantic_hash": "3260fb967452b2a54904073be8b1929a"
+  },
+  "_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md": {
+    "mtime": 1793606152.7220662,
+    "ast_hash": "b8acbaf4837e7516e73c5f979f1e7af4",
+    "semantic_hash": "b8acbaf4837e7516e73c5f979f1e7af4"
+  },
+  "_notebook_md/myr_mechanistic_model_5L_refined_kinetics.md": {
+    "mtime": 1793606152.7277687,
+    "ast_hash": "c651290401e4e80a06336ac580eb680d",
+    "semantic_hash": "c651290401e4e80a06336ac580eb680d"
+  },
+  "ringkasan_eksekutif_myristoylasi.pdf": {
+    "mtime": 1793606153.2521203,
+    "ast_hash": "8dcdda64b4ca86702b1aa679bbb06762",
+    "semantic_hash": "8dcdda64b4ca86702b1aa679bbb06762"
   }
 }

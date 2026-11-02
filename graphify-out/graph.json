@@ -74,7 +74,7 @@
         "mcp_kind": "mcp_config_file"
       },
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "graphify",
       "norm_label": ".mcp.json",
       "id": "mcp"
@@ -88,7 +88,7 @@
         "mcp_kind": "mcp_server"
       },
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "graphify",
       "norm_label": "graphify",
       "id": "mcp_mcp_server_graphify"
@@ -102,7 +102,7 @@
         "mcp_kind": "mcp_command"
       },
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "graphify",
       "norm_label": "graphify",
       "id": "mcp_command_graphify"
@@ -135,7 +135,7 @@
       "source_file": "Python/myr_simulation/webapp/engine/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 17,
+      "community": 19,
       "community_name": "Webapp Engine Init",
       "norm_label": "__init__.py",
       "id": "webapp_engine_init"
@@ -146,7 +146,7 @@
       "source_file": "Python/myr_simulation/webapp/engine/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 17,
+      "community": 19,
       "community_name": "Webapp Engine Init",
       "norm_label": "standalone mass-transfer / kinetic-fitting engine for ph-tracked titration data.",
       "id": "webapp_engine_init_rationale_1"
@@ -421,7 +421,7 @@
       "source_file": "Python/myr_simulation/webapp/engine/io_utils.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "CSV I/O Utilities",
       "norm_label": "io_utils.py",
       "id": "webapp_engine_io_utils"
@@ -432,7 +432,7 @@
       "source_file": "Python/myr_simulation/webapp/engine/io_utils.py",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "CSV I/O Utilities",
       "norm_label": "_guess_column()",
       "id": "webapp_engine_io_utils_guess_column"
@@ -443,7 +443,7 @@
       "source_file": "Python/myr_simulation/webapp/engine/io_utils.py",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "CSV I/O Utilities",
       "norm_label": "load_ph_csv()",
       "id": "webapp_engine_io_utils_load_ph_csv"
@@ -454,7 +454,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "CSV I/O Utilities",
       "norm_label": "dataframe",
       "id": "dataframe"
@@ -465,7 +465,7 @@
       "source_file": "Python/myr_simulation/webapp/engine/io_utils.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "CSV I/O Utilities",
       "norm_label": "csv ingestion helpers: flexible column detection for non-engineer users who may",
       "id": "webapp_engine_io_utils_rationale_1"
@@ -476,7 +476,7 @@
       "source_file": "Python/myr_simulation/webapp/engine/io_utils.py",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "CSV I/O Utilities",
       "norm_label": "read an uploaded csv and return a dataframe with columns guaranteed to be     na",
       "id": "webapp_engine_io_utils_rationale_23"
@@ -685,7 +685,7 @@
       "source_file": "Python/myr_simulation/webapp/generate_cert.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "TLS Cert Generation",
       "norm_label": "generate_cert.py",
       "id": "webapp_generate_cert"
@@ -696,7 +696,7 @@
       "source_file": "Python/myr_simulation/webapp/generate_cert.py",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "TLS Cert Generation",
       "norm_label": "generate_self_signed_cert()",
       "id": "webapp_generate_cert_generate_self_signed_cert"
@@ -707,7 +707,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "TLS Cert Generation",
       "norm_label": "path",
       "id": "path"
@@ -718,7 +718,7 @@
       "source_file": "Python/myr_simulation/webapp/generate_cert.py",
       "source_location": "L78",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "TLS Cert Generation",
       "norm_label": "main()",
       "id": "webapp_generate_cert_main"
@@ -729,7 +729,7 @@
       "source_file": "Python/myr_simulation/webapp/generate_cert.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "TLS Cert Generation",
       "norm_label": "generate a self-signed tls certificate/key pair for serving this app over https.",
       "id": "webapp_generate_cert_rationale_1"
@@ -743,7 +743,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "project memory index (memory.md)",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "claude_memory_memory_index"
@@ -757,7 +757,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "numerical debugging feedback: diagnostic-first before patching",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "claude_memory_feedback_numerical_debugging_principle"
@@ -771,7 +771,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "ds-pool reactor model status",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "claude_memory_project_dspool_reactor_model_status"
@@ -785,7 +785,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 10,
+      "community": 11,
       "norm_label": "hard clamp fix attempt (rejected: absorbing negative state)",
       "community_name": "Failed Fix Attempts (Clamp/Sign-Preserving)",
       "id": "hard_clamp_fix_attempt"
@@ -799,7 +799,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 10,
+      "community": 11,
       "norm_label": "sign-preserving continuation fix attempt (rejected: runaway blow-up)",
       "community_name": "Failed Fix Attempts (Clamp/Sign-Preserving)",
       "id": "sign_preserving_continuation_fix_attempt"
@@ -813,7 +813,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "smooth non-negative floor regularization (accepted fix)",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "smooth_floor_fix"
@@ -827,7 +827,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "terminal ode event (nhs-myr < 0.01% of charge stops integration)",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "terminal_ode_event"
@@ -841,7 +841,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 5,
       "norm_label": "ds-pool refined kinetic fit (02jul2026_ds_pool_refined_results.pkl)",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "ds_pool_refined_kinetic_fit"
@@ -855,7 +855,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 5,
       "norm_label": "species pooling convention (other_ds1, ds2_total, ds3)",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "species_pooling_convention"
@@ -869,7 +869,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "sop operating point (0.482 mg/ml, 12.96 ml/min, stop t=30 min, 64.8% yield, 71.9% purity)",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "sop_operating_point"
@@ -883,7 +883,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "transfer_mass_5l_pde.ipynb (1d axial reaction-diffusion pde)",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "transfer_mass_5l_pde_notebook"
@@ -897,7 +897,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "d_eff derived axial eddy-dispersion coefficient (~7.0e-5 m2/s)",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "d_eff_axial_dispersion"
@@ -911,7 +911,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "residual negative nhs-myr display artifact (display-only clip fix)",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "negative_nhs_myr_artifact"
@@ -939,7 +939,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 5,
       "norm_label": "species resolution decision criteria (pooled vs. full regiochemistry)",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "species_resolution_decision"
@@ -953,7 +953,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 5,
       "norm_label": "fit versioning / staleness discipline",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "fit_versioning_discipline"
@@ -981,7 +981,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "forward batch-validation workflow (freeze params, run forward)",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "batch_validation_workflow"
@@ -1023,7 +1023,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 3,
       "norm_label": "torispherical (dished) bottom head geometry handling",
       "community_name": "Compartment-Count Decision Ladder",
       "id": "torispherical_head_geometry"
@@ -1037,7 +1037,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 3,
       "norm_label": "5l->250ml compartment degeneration (3 compartments -> 2)",
       "community_name": "Compartment-Count Decision Ladder",
       "id": "compartment_degeneration_case"
@@ -1079,7 +1079,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 21,
+      "community": 23,
       "norm_label": "standard k-epsilon turbulence model",
       "community_name": "Standard k-epsilon Turbulence Model",
       "id": "turbulence_model_standard_k_epsilon"
@@ -1093,7 +1093,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 20,
+      "community": 22,
       "norm_label": "rng k-epsilon turbulence model",
       "community_name": "RNG k-epsilon Turbulence Model",
       "id": "turbulence_model_rng_k_epsilon"
@@ -1135,7 +1135,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 21,
       "norm_label": "large eddy simulation (les)",
       "community_name": "LES Turbulence Model",
       "id": "turbulence_model_les"
@@ -1149,7 +1149,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 15,
+      "community": 16,
       "norm_label": "mrf (multiple reference frames) impeller modeling",
       "community_name": "Impeller Modeling (MRF vs Sliding Mesh)",
       "id": "mrf_impeller_modeling"
@@ -1163,7 +1163,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 15,
+      "community": 16,
       "norm_label": "sliding mesh impeller modeling",
       "community_name": "Impeller Modeling (MRF vs Sliding Mesh)",
       "id": "sliding_mesh_impeller_modeling"
@@ -1177,7 +1177,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 16,
+      "community": 18,
       "norm_label": "pumping number nq = q/(n*d^3)",
       "community_name": "Power & Pumping Numbers",
       "id": "nq_pumping_number"
@@ -1191,7 +1191,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 16,
+      "community": 18,
       "norm_label": "power number np = p/(rho*n^3*d^5)",
       "community_name": "Power & Pumping Numbers",
       "id": "np_power_number"
@@ -1205,7 +1205,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 7,
       "norm_label": "cfd zone/compartment boundary identification (v_z=0 locus, q_ij flux integration)",
       "community_name": "CFD Zone ID & Mixing-Time Studies",
       "id": "zone_identification_cfd"
@@ -1219,7 +1219,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 7,
       "norm_label": "bakker & fasano 1993 feed-point-vs-bulk zoning cfd study",
       "community_name": "CFD Zone ID & Mixing-Time Studies",
       "id": "bakker_fasano_1993_study"
@@ -1233,7 +1233,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 7,
       "norm_label": "middleton et al. 1986 competitive-consecutive reaction system (a+b->r, r+b->s)",
       "community_name": "CFD Zone ID & Mixing-Time Studies",
       "id": "middleton_1986_study"
@@ -1247,7 +1247,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 12,
       "norm_label": "macro-mixing time theta_95",
       "community_name": "Macro-Mixing Time Correlations",
       "id": "macro_mixing_theta95"
@@ -1261,7 +1261,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 7,
       "norm_label": "meso-mixing (feed-plume spreading, tau_d/tau_s timescales)",
       "community_name": "CFD Zone ID & Mixing-Time Studies",
       "id": "meso_mixing"
@@ -1275,7 +1275,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 15,
       "norm_label": "micro-mixing: kolmogorov/batchelor scales and engulfment time",
       "community_name": "Micro-Mixing Timescales",
       "id": "micro_mixing_kolmogorov"
@@ -1303,7 +1303,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 7,
       "norm_label": "bourne & hilber 1990 critical addition time relation (tau_crit*n^n=const)",
       "community_name": "CFD Zone ID & Mixing-Time Studies",
       "id": "bourne_hilber_1990"
@@ -1317,7 +1317,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 14,
       "norm_label": "snappyhexmesh parametric geometry pitfalls (stl scaling, non-manifold, refinement)",
       "community_name": "Moving-Mesh CFD Pitfalls",
       "id": "snaphexmesh_pitfalls"
@@ -1331,7 +1331,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 14,
       "norm_label": "transient scalar transport on frozen mrf flow field: numerics/setup",
       "community_name": "Moving-Mesh CFD Pitfalls",
       "id": "transient_scalar_transport_numerics"
@@ -1345,7 +1345,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 14,
       "norm_label": "moving-mesh transient cfd for a growing liquid volume with a real inlet",
       "community_name": "Moving-Mesh CFD Pitfalls",
       "id": "moving_mesh_growing_volume"
@@ -1373,7 +1373,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 12,
       "norm_label": "grenville (1992) turbulent-regime blend time correlation",
       "community_name": "Macro-Mixing Time Correlations",
       "id": "grenville_1992_correlation"
@@ -1401,7 +1401,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 15,
       "norm_label": "engulfment micromixing time tau_e (baldyga & bourne)",
       "community_name": "Micro-Mixing Timescales",
       "id": "engulfment_micromixing_time"
@@ -1415,7 +1415,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 7,
       "norm_label": "corrsin full mixing time tau_m",
       "community_name": "CFD Zone ID & Mixing-Time Studies",
       "id": "corrsin_mixing_time"
@@ -1429,7 +1429,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 12,
       "norm_label": "cooke et al. 1988 multi-impeller/aspect-ratio mixing-time correction (h^2.43)",
       "community_name": "Macro-Mixing Time Correlations",
       "id": "cooke_1988_correction"
@@ -1457,7 +1457,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "diagnostic-first, not patch-first workflow",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "diagnostic_first_workflow"
@@ -1471,7 +1471,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 10,
+      "community": 11,
       "norm_label": "hard clamp fix pattern (generic): fails via spurious frozen branch",
       "community_name": "Failed Fix Attempts (Clamp/Sign-Preserving)",
       "id": "hard_clamp_pattern"
@@ -1485,7 +1485,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 10,
+      "community": 11,
       "norm_label": "sign-preserving continuation pattern (generic): fails via runaway blow-up",
       "community_name": "Failed Fix Attempts (Clamp/Sign-Preserving)",
       "id": "sign_preserving_continuation_pattern"
@@ -1499,7 +1499,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "smooth non-negative floor pattern (generic working fix)",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "smooth_nonneg_floor_pattern"
@@ -1513,7 +1513,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "terminal solve_ivp event for asymptotic depletion (generic pattern)",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "terminal_event_pattern"
@@ -1527,7 +1527,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 7,
       "norm_label": "cfd-to-ode coupling interface (fixed q_ij / zone-averaged epsilon, no tight coupling)",
       "community_name": "CFD Zone ID & Mixing-Time Studies",
       "id": "cfd_ode_coupling_interface"
@@ -1555,7 +1555,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 3,
       "norm_label": "compartment number decision ladder (1 / 2 / n>2 compartments)",
       "community_name": "Compartment-Count Decision Ladder",
       "id": "compartment_count_decision_ladder"
@@ -1569,7 +1569,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 3,
       "norm_label": "reynolds/froude regime check gate (re_i turbulent plateau, fr_i vortex ceiling)",
       "community_name": "Compartment-Count Decision Ladder",
       "id": "reynolds_froude_regime_check"
@@ -1583,7 +1583,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 7,
       "norm_label": "rtd-based experimental validation (e(t), n-tanks-in-series)",
       "community_name": "CFD Zone ID & Mixing-Time Studies",
       "id": "rtd_based_validation"
@@ -1597,7 +1597,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 18,
+      "community": 20,
       "norm_label": "jacobian condition number / profile-likelihood identifiability diagnostics",
       "community_name": "Identifiability Diagnostics",
       "id": "jacobian_condition_number_check"
@@ -1611,7 +1611,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 5,
       "norm_label": "log-parameterize + dilled-bundle-with-fallback handoff pattern",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "fitted_parameter_handoff_pattern"
@@ -1625,7 +1625,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "structural cross-check: conserved-quantity ceiling (independent of optimizer)",
       "community_name": "Webapp Engine Architecture",
       "id": "structural_cross_check_conserved_quantity"
@@ -1709,7 +1709,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 5,
       "norm_label": "ds_pool_kinetic_model_refined.ipynb (produces active kinetic fit)",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "ds_pool_kinetic_model_refined_notebook"
@@ -1723,7 +1723,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "myr_mechanistic_model_5l_optimized_fixed.ipynb (current 2-compartment reactor model)",
       "community_name": "DS-Pool Reactor Debugging & Fixes",
       "id": "myr_mechanistic_model_5l_optimized_fixed_notebook"
@@ -1751,7 +1751,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 3,
       "norm_label": "scale_down_250ml.ipynb (250 ml scale-down mixing model)",
       "community_name": "Compartment-Count Decision Ladder",
       "id": "scale_down_250ml_notebook"
@@ -1765,7 +1765,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "pra5_myr_model.ipynb (forward-predictive validation vs. run 1/run 2)",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "pra5_myr_model_notebook"
@@ -1779,7 +1779,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "dataprep_rx_kinetic.ipynb (experimental data prep)",
       "community_name": "Project Notebooks & Modeling References",
       "id": "dataprep_rx_kinetic_notebook"
@@ -1807,7 +1807,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 5,
       "norm_label": "ds_pool_kinetic_model.ipynb (superseded, non-refined)",
       "community_name": "Project Notebooks & Modeling References",
       "id": "ds_pool_kinetic_model_notebook"
@@ -1821,7 +1821,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "02jul2026_optimized_hydrolysis_kinetic_model.dill (superseded 9-species fit)",
       "community_name": "Project Notebooks & Modeling References",
       "id": "optimized_hydrolysis_kinetic_model_dill"
@@ -1835,7 +1835,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "30jul2026_hydrolysis_kinetic_model.dill (superseded 9-species fit)",
       "community_name": "Project Notebooks & Modeling References",
       "id": "hydrolysis_kinetic_model_30jul_dill"
@@ -1947,7 +1947,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "stage 3: dynamic glycine quench",
       "community_name": "DS-Pool Kinetic Fit & SOP",
       "id": "glycine_quench_stage"
@@ -1989,7 +1989,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/readme.md - mass-transfer & kinetic fitting tool",
       "community_name": "Webapp Engine Architecture",
       "id": "python_myr_simulation_webapp_readme_doc"
@@ -2003,7 +2003,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/app.py (streamlit ui)",
       "community_name": "Webapp Engine Architecture",
       "id": "webapp_app_module"
@@ -2017,7 +2017,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/generate_cert.py (self-signed tls cert generator)",
       "community_name": "Webapp Engine Architecture",
       "id": "webapp_generate_cert_module"
@@ -2031,7 +2031,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/engine/geometry.py (vessel/zone volume construction)",
       "community_name": "Webapp Engine Architecture",
       "id": "webapp_engine_geometry_module"
@@ -2045,7 +2045,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/engine/chemistry.py (henderson-hasselbalch + titrant feed model)",
       "community_name": "Webapp Engine Architecture",
       "id": "webapp_engine_chemistry_module"
@@ -2059,7 +2059,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/engine/transport_model.py (n-compartment ode engine + least-squares fitting)",
       "community_name": "Webapp Engine Architecture",
       "id": "webapp_engine_transport_model_module"
@@ -2073,7 +2073,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/engine/model_selection.py (automatic compartment-count selection)",
       "community_name": "Webapp Engine Architecture",
       "id": "webapp_engine_model_selection_module"
@@ -2087,7 +2087,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/engine/io_utils.py (flexible csv ingestion)",
       "community_name": "Webapp Engine Architecture",
       "id": "webapp_engine_io_utils_module"
@@ -2101,7 +2101,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/.streamlit/config.toml (https wiring + brand theme)",
       "community_name": "Webapp Engine Architecture",
       "id": "webapp_streamlit_config_toml"
@@ -2115,7 +2115,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "henderson-hasselbalch <-> transport ode coupling (moles-based, single closure on probe zone)",
       "community_name": "Webapp Engine Architecture",
       "id": "henderson_hasselbalch_coupling"
@@ -2129,7 +2129,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "n-compartment ode engine (moles-based state, fickian junction exchange)",
       "community_name": "Webapp Engine Architecture",
       "id": "n_compartment_ode_engine"
@@ -2143,7 +2143,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "nested extra-sum-of-squares f-test for compartment-count selection",
       "community_name": "Webapp Engine Architecture",
       "id": "nested_f_test_selection"
@@ -2157,7 +2157,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "mass-balance ceiling check (closed-system equilibrium vs. data peak)",
       "community_name": "Webapp Engine Architecture",
       "id": "mass_balance_ceiling_check"
@@ -2171,7 +2171,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "webapp/requirements.txt dependencies (streamlit, plotly, cryptography, etc.)",
       "community_name": "Webapp Engine Architecture",
       "id": "python_myr_simulation_webapp_requirements_deps"
@@ -2185,7 +2185,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "nq vs rpm: vortex-froude theory chart (cell 3 anchored)",
       "community_name": "Nq vs RPM Chart (Vortex Correction)",
       "id": "python_myr_simulation_grafik_nq_vs_rpm_chart"
@@ -2199,7 +2199,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "vortex-corrected pumping/flow number nq(n)",
       "community_name": "Nq vs RPM Chart (Vortex Correction)",
       "id": "python_myr_simulation_grafik_nq_vs_rpm_nq_vortex_corrected"
@@ -2213,7 +2213,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "impeller froude number (fr_i)",
       "community_name": "Nq vs RPM Chart (Vortex Correction)",
       "id": "python_myr_simulation_grafik_nq_vs_rpm_froude_number"
@@ -2227,7 +2227,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "literature pbt pumping number range (rentang literatur pbt, ~0.5-0.87)",
       "community_name": "Nq vs RPM Chart (Vortex Correction)",
       "id": "python_myr_simulation_grafik_nq_vs_rpm_literature_pbt_range"
@@ -2241,7 +2241,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "experimental nq anchor point (cell 3) = 0.027 at ~450 rpm",
       "community_name": "Nq vs RPM Chart (Vortex Correction)",
       "id": "python_myr_simulation_grafik_nq_vs_rpm_nq_experimental_cell3"
@@ -2255,7 +2255,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "unbaffled vortex onset limit (fr=0.15, ~266 rpm)",
       "community_name": "Nq vs RPM Chart (Vortex Correction)",
       "id": "python_myr_simulation_grafik_nq_vs_rpm_unbaffled_vortex_limit"
@@ -2269,7 +2269,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "unbaffled stirred-tank vessel (vortexing regime)",
       "community_name": "Nq vs RPM Chart (Vortex Correction)",
       "id": "python_myr_simulation_grafik_nq_vs_rpm_unbaffled_vessel"
@@ -2285,10 +2285,10 @@
       "contributor": null,
       "rationale": "One-page non-technical summary: model supports go/no-go screening before scale-up but not final commercial specs.",
       "_origin": "semantic",
-      "id": "python_myr_simulation_ringkasan_eksekutif_myristoylasi",
-      "community": 2,
+      "community": 3,
       "community_name": "DS-Pool Kinetic Fit & SOP",
-      "norm_label": "ringkasan eksekutif myristoylasi (25 sep 2026 indonesian executive summary)"
+      "norm_label": "ringkasan eksekutif myristoylasi (25 sep 2026 indonesian executive summary)",
+      "id": "python_myr_simulation_ringkasan_eksekutif_myristoylasi"
     },
     {
       "label": "Forward validation vs 2 real batches (yield 59.6/60.2% vs predicted 64.8%; purity 62.7/63.5% vs 71.9%; ~5 pp optimistic)",
@@ -2300,10 +2300,10 @@
       "author": null,
       "contributor": null,
       "_origin": "semantic",
-      "id": "ringkasan_model_validation_vs_real_batches",
-      "community": 2,
+      "community": 3,
       "community_name": "DS-Pool Kinetic Fit & SOP",
-      "norm_label": "forward validation vs 2 real batches (yield 59.6/60.2% vs predicted 64.8%; purity 62.7/63.5% vs 71.9%; ~5 pp optimistic)"
+      "norm_label": "forward validation vs 2 real batches (yield 59.6/60.2% vs predicted 64.8%; purity 62.7/63.5% vs 71.9%; ~5 pp optimistic)",
+      "id": "ringkasan_model_validation_vs_real_batches"
     },
     {
       "label": "Limitations and data needs (only 2 batches, 4/10 kinetic params loose, no pilot/3500 L validation, need 5-6 batches)",
@@ -2315,10 +2315,10 @@
       "author": null,
       "contributor": null,
       "_origin": "semantic",
-      "id": "ringkasan_limitations_and_data_needs",
-      "community": 2,
+      "community": 3,
       "community_name": "DS-Pool Kinetic Fit & SOP",
-      "norm_label": "limitations and data needs (only 2 batches, 4/10 kinetic params loose, no pilot/3500 l validation, need 5-6 batches)"
+      "norm_label": "limitations and data needs (only 2 batches, 4/10 kinetic params loose, no pilot/3500 l validation, need 5-6 batches)",
+      "id": "ringkasan_limitations_and_data_needs"
     },
     {
       "label": "3500 L OPEX break-even target Rp 634 M/batch (323 batches/yr); yield is main lever (+30-50%)",
@@ -2330,10 +2330,10 @@
       "author": null,
       "contributor": null,
       "_origin": "semantic",
-      "id": "ringkasan_opex_breakeven_3500l",
-      "community": 2,
+      "community": 3,
       "community_name": "DS-Pool Kinetic Fit & SOP",
-      "norm_label": "3500 l opex break-even target rp 634 m/batch (323 batches/yr); yield is main lever (+30-50%)"
+      "norm_label": "3500 l opex break-even target rp 634 m/batch (323 batches/yr); yield is main lever (+30-50%)",
+      "id": "ringkasan_opex_breakeven_3500l"
     },
     {
       "label": "Profitability scenarios chart (5 scenarios; annual revenue/OPEX/net profit; OPEX/batch Rp 3,941M vs BEP Rp 994M)",
@@ -2346,10 +2346,10 @@
       "contributor": null,
       "rationale": "Copy of gmp-3500l figure; shows OPEX per batch must fall to ~Rp 994M for break-even, scenarios 4-5 (839-844M) give +50M profit.",
       "_origin": "semantic",
-      "id": "python_myr_simulation_figs_ringkasan_grafik_optimasi_profitabilitas",
-      "community": 2,
+      "community": 3,
       "community_name": "DS-Pool Kinetic Fit & SOP",
-      "norm_label": "profitability scenarios chart (5 scenarios; annual revenue/opex/net profit; opex/batch rp 3,941m vs bep rp 994m)"
+      "norm_label": "profitability scenarios chart (5 scenarios; annual revenue/opex/net profit; opex/batch rp 3,941m vs bep rp 994m)",
+      "id": "python_myr_simulation_figs_ringkasan_grafik_optimasi_profitabilitas"
     },
     {
       "label": "250 mL RANS fit vs experiment pH curve (Exp3; 250-mL-only C2=2.2337 vs combined C2=2.2469, RMSE 0.042)",
@@ -2362,10 +2362,10 @@
       "contributor": null,
       "rationale": "Copy of str_mass_transfer figure; combined 5L+250mL closure fit matches experiment within ~0.04 pH RMSE, with small offset at plateau (~8.80 vs 8.77).",
       "_origin": "semantic",
-      "id": "python_myr_simulation_figs_ringkasan_rans_5l_combined_fit_comparison",
-      "community": 6,
+      "community": 3,
       "community_name": "Compartment-Count Decision Ladder",
-      "norm_label": "250 ml rans fit vs experiment ph curve (exp3; 250-ml-only c2=2.2337 vs combined c2=2.2469, rmse 0.042)"
+      "norm_label": "250 ml rans fit vs experiment ph curve (exp3; 250-ml-only c2=2.2337 vs combined c2=2.2469, rmse 0.042)",
+      "id": "python_myr_simulation_figs_ringkasan_rans_5l_combined_fit_comparison"
     },
     {
       "label": "str_mass_transfer project (source of RANS fit figure)",
@@ -2377,10 +2377,10 @@
       "author": null,
       "contributor": null,
       "_origin": "semantic",
-      "id": "str_mass_transfer_project",
-      "community": 6,
+      "community": 3,
       "community_name": "Compartment-Count Decision Ladder",
-      "norm_label": "str_mass_transfer project (source of rans fit figure)"
+      "norm_label": "str_mass_transfer project (source of rans fit figure)",
+      "id": "str_mass_transfer_project"
     },
     {
       "label": "gmp-3500l project (source of profitability figure)",
@@ -2392,10 +2392,10 @@
       "author": null,
       "contributor": null,
       "_origin": "semantic",
-      "id": "gmp_3500l_project",
-      "community": 2,
+      "community": 3,
       "community_name": "DS-Pool Kinetic Fit & SOP",
-      "norm_label": "gmp-3500l project (source of profitability figure)"
+      "norm_label": "gmp-3500l project (source of profitability figure)",
+      "id": "gmp_3500l_project"
     },
     {
       "label": ".mcp.json registers graphify MCP server over graph.json",
@@ -2407,10 +2407,357 @@
       "author": null,
       "contributor": null,
       "_origin": "semantic",
-      "id": "mcp_json_graphify_registration",
       "community": 1,
       "community_name": "Project Notebooks & Modeling References",
-      "norm_label": ".mcp.json registers graphify mcp server over graph.json"
+      "norm_label": ".mcp.json registers graphify mcp server over graph.json",
+      "id": "mcp_json_graphify_registration"
+    },
+    {
+      "label": "dataprep_rx_kinetic.md (notebook export: HPLC data prep)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/dataprep_rx_kinetic.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_dataprep_rx_kinetic",
+      "community": 2,
+      "norm_label": "dataprep_rx_kinetic.md (notebook export: hplc data prep)"
+    },
+    {
+      "label": "DS_Pool_Kinetic_Model.md (notebook export)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_ds_pool_kinetic_model",
+      "community": 5,
+      "norm_label": "ds_pool_kinetic_model.md (notebook export)"
+    },
+    {
+      "label": "DS_Pool_Kinetic_Model_Refined.md (notebook export)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model_Refined.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_ds_pool_kinetic_model_refined",
+      "community": 5,
+      "norm_label": "ds_pool_kinetic_model_refined.md (notebook export)"
+    },
+    {
+      "label": "HydrolysisKineticModel.md (notebook export)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_hydrolysis_kinetic_model",
+      "community": 2,
+      "norm_label": "hydrolysiskineticmodel.md (notebook export)"
+    },
+    {
+      "label": "HydrolysisKineticModel_FIXED.md (notebook export)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel_FIXED.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_hydrolysis_kinetic_model_fixed",
+      "community": 2,
+      "norm_label": "hydrolysiskineticmodel_fixed.md (notebook export)"
+    },
+    {
+      "label": "Kinetika.md (notebook export: 3-zone fed-batch dummy-k scale-up)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/Kinetika.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_kinetika",
+      "community": 17,
+      "norm_label": "kinetika.md (notebook export: 3-zone fed-batch dummy-k scale-up)"
+    },
+    {
+      "label": "kinetika2.md (notebook export: weighted-SSE two-stage fit)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/kinetika2.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_kinetika2",
+      "community": 2,
+      "norm_label": "kinetika2.md (notebook export: weighted-sse two-stage fit)"
+    },
+    {
+      "label": "myr_mechanistic_model_5L.md (notebook export)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_myr_mech_5l",
+      "community": 2,
+      "norm_label": "myr_mechanistic_model_5l.md (notebook export)"
+    },
+    {
+      "label": "myr_mechanistic_model_5L_optimized.md (notebook export)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_myr_mech_5l_opt",
+      "community": 2,
+      "norm_label": "myr_mechanistic_model_5l_optimized.md (notebook export)"
+    },
+    {
+      "label": "myr_mechanistic_model_5L_optimized_FIXED.md (notebook export)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_myr_mech_5l_opt_fixed",
+      "community": 2,
+      "norm_label": "myr_mechanistic_model_5l_optimized_fixed.md (notebook export)"
+    },
+    {
+      "label": "myr_mechanistic_model_5L_refined_kinetics.md (notebook export)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_refined_kinetics.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_myr_mech_5l_refined",
+      "community": 2,
+      "norm_label": "myr_mechanistic_model_5l_refined_kinetics.md (notebook export)"
+    },
+    {
+      "label": "DS-pool lumping by molarity (tier members share MW +210.36 Da/myristoyl)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Only desb30 and detemir confirmed vs reference standard; other 6 peaks assigned by retention-time clustering, so lump by DS tier. Pool molarity = sum g/L / shared tier MW (DS1 5916.885, DS2 6127.246, DS3 6337.607).",
+      "id": "nbmd_ds_pool_lumping_rationale",
+      "community": 5,
+      "norm_label": "ds-pool lumping by molarity (tier members share mw +210.36 da/myristoyl)"
+    },
+    {
+      "label": "DS-pool reaction network (5 myristoylation edges k1-k5 + hydrolysis k6; 8 free params incl n,m)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "vs 12-edge site-resolved lattice (15 params) and 10-param original; 368 raw / 274 usable points.",
+      "id": "nbmd_ds_pool_network",
+      "community": 5,
+      "norm_label": "ds-pool reaction network (5 myristoylation edges k1-k5 + hydrolysis k6; 8 free params incl n,m)"
+    },
+    {
+      "label": "Fit driver: Stage 0 first-order baseline then Stage A differential evolution (k,n,m free) with smooth mass-balance penalty",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_two_stage_de_fit",
+      "community": 5,
+      "norm_label": "fit driver: stage 0 first-order baseline then stage a differential evolution (k,n,m free) with smooth mass-balance penalty"
+    },
+    {
+      "label": "Refinement pass: n lower bound widened 0.1 to -0.5, warm-started from previous fit",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model_Refined.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Previous free-n,m fit (SSE 3.3868, n=0.1187 pinned at bound, m=1.8915, dAIC=-64.1 vs baseline SSE 4.3427) -> only direction trustworthy. If n pins again, switch to Michaelis-Menten saturation law. Radau runtime ~74 min.",
+      "id": "nbmd_refine_widen_n_bound",
+      "community": 5,
+      "norm_label": "refinement pass: n lower bound widened 0.1 to -0.5, warm-started from previous fit"
+    },
+    {
+      "label": "AIC/BIC comparison: first-order baseline vs free n,m vs refinement",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model_Refined.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_aic_bic_comparison",
+      "community": 5,
+      "norm_label": "aic/bic comparison: first-order baseline vs free n,m vs refinement"
+    },
+    {
+      "label": "9-species regiochemistry + hydrolysis fit with n=m=1 hardcoded, log-param global DE + L-BFGS-B; saved as dill bundle",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_9species_fit_n_m_fixed",
+      "community": 2,
+      "norm_label": "9-species regiochemistry + hydrolysis fit with n=m=1 hardcoded, log-param global de + l-bfgs-b; saved as dill bundle"
+    },
+    {
+      "label": "FIXED fit: n,m freed (0.1-4), smooth quadratic mass-balance penalty replaces 1e12 cliff, boundary-pinning check",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel_FIXED.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Hardcoded n=m=1 meant optimizer could never report other orders; hard cliff has no gradient and breaks L-BFGS-B polishing.",
+      "id": "nbmd_free_nm_fix",
+      "community": 2,
+      "norm_label": "fixed fit: n,m freed (0.1-4), smooth quadratic mass-balance penalty replaces 1e12 cliff, boundary-pinning check"
+    },
+    {
+      "label": "3-zone fed-batch ODE engine (19 states), dummy k_conj/k_impB/k_quench, GA optimization of feed rate, clearance, quench time, RPM",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/Kinetika.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "k values are placeholders pending 1L/5L HPLC data; glycine quench 10x molar excess.",
+      "id": "nbmd_3zone_fedbatch_engine",
+      "community": 17,
+      "norm_label": "3-zone fed-batch ode engine (19 states), dummy k_conj/k_impb/k_quench, ga optimization of feed rate, clearance, quench time, rpm"
+    },
+    {
+      "label": "Weighted-SSE objective with two-stage global+local refinement on log-params (7-reaction network)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/kinetika2.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_weighted_sse_two_stage",
+      "community": 2,
+      "norm_label": "weighted-sse objective with two-stage global+local refinement on log-params (7-reaction network)"
+    },
+    {
+      "label": "Google Sheets HPLC load, peak pivot, Substrate/Product tagging, t=0 product zero-fill, export kinetic_data_processed.csv",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/dataprep_rx_kinetic.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_hplc_gsheet_prep",
+      "community": 2,
+      "norm_label": "google sheets hplc load, peak pivot, substrate/product tagging, t=0 product zero-fill, export kinetic_data_processed.csv"
+    },
+    {
+      "label": "Reactor model: 9-species regiochemistry + hydrolysis + glycine quench, 3-compartment (bulk/impeller/headspace), 3 stages (ACN mix, spike reaction, quench)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Glycine quench reuses k[0] (desb30->A1) as SME-specified proxy since A1 is the N-terminal glycine amine.",
+      "id": "nbmd_3compartment_reactor",
+      "community": 2,
+      "norm_label": "reactor model: 9-species regiochemistry + hydrolysis + glycine quench, 3-compartment (bulk/impeller/headspace), 3 stages (acn mix, spike reaction, quench)"
+    },
+    {
+      "label": "Dosed NHS-Myr feed with time-varying volume; solve T_feed for 30-min Detemir peak (bound 1-30 min); dynamic glycine quench",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Peak at 25.8 min at T_feed=30 min bound; pump must stop early (~86% of charge, ~1.72x excess vs intended 2.0x).",
+      "id": "nbmd_feed_timing_opt",
+      "community": 2,
+      "norm_label": "dosed nhs-myr feed with time-varying volume; solve t_feed for 30-min detemir peak (bound 1-30 min); dynamic glycine quench"
+    },
+    {
+      "label": "DS-pool refined kinetics coupled to 3-compartment 5 L reactor (n=0.12 NHS-Myr, m=1.89), moles-based state",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nbmd_dspool_reactor_coupling",
+      "community": 2,
+      "norm_label": "ds-pool refined kinetics coupled to 3-compartment 5 l reactor (n=0.12 nhs-myr, m=1.89), moles-based state"
+    },
+    {
+      "label": "1 nM smooth floor on fractional-power terms (n=0.12 near-singular at NHS-Myr -> 0)",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Without it stiff solvers stall or yield negative concentrations that silently break the mass balance.",
+      "id": "nbmd_smooth_floor_1nM",
+      "community": 2,
+      "norm_label": "1 nm smooth floor on fractional-power terms (n=0.12 near-singular at nhs-myr -> 0)"
+    },
+    {
+      "label": "Pump rate (10-200 mL/min shared pump) x NHS-Myr stock sweep: selectivity 73-76%, 1-D root-find pump rate for exactly 30 min Detemir peak; keep 0.482 mg/mL stock",
+      "file_type": "document",
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Stock dilution buys ~1 pt selectivity, within fit noise (R2=0.77); 5 L ceiling checked with glycine headroom.",
+      "id": "nbmd_pump_stock_sweep",
+      "community": 2,
+      "norm_label": "pump rate (10-200 ml/min shared pump) x nhs-myr stock sweep: selectivity 73-76%, 1-d root-find pump rate for exactly 30 min detemir peak; keep 0.482 mg/ml stock"
     }
   ],
   "links": [
@@ -4059,6 +4406,36 @@
     {
       "relation": "conceptually_related_to",
       "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_network",
+      "target": "ds_pool_refined_kinetic_fit"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_dspool_reactor_coupling",
+      "target": "ds_pool_refined_kinetic_fit"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model_Refined.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_refine_widen_n_bound",
+      "target": "ds_pool_refined_kinetic_fit"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
       "confidence_score": 0.75,
       "source_file": "Python/myr_simulation/ringkasan_eksekutif_myristoylasi.pdf",
       "source_location": null,
@@ -4075,6 +4452,16 @@
       "weight": 1.0,
       "source": "species_resolution_decision",
       "target": "ds_pool_refined_kinetic_fit"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_lumping_rationale",
+      "target": "species_pooling_convention"
     },
     {
       "relation": "semantically_similar_to",
@@ -4104,6 +4491,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "glycine_quench_stage",
+      "target": "sop_operating_point"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_pump_stock_sweep",
       "target": "sop_operating_point"
     },
     {
@@ -4867,6 +5264,16 @@
       "target": "webapp_subproject"
     },
     {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_smooth_floor_1nM",
+      "target": "python_myr_simulation_claude_hard_rules"
+    },
+    {
       "relation": "conceptually_related_to",
       "confidence": "AMBIGUOUS",
       "confidence_score": 0.2,
@@ -4899,6 +5306,26 @@
     {
       "relation": "semantically_similar_to",
       "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model_Refined.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_kinetic_model_refined",
+      "target": "ds_pool_kinetic_model_refined_notebook"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l_opt_fixed",
+      "target": "myr_mechanistic_model_5l_optimized_fixed_notebook"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
       "confidence_score": 0.75,
       "source_file": "Python/myr_simulation/CLAUDE.md",
       "source_location": null,
@@ -4915,6 +5342,16 @@
       "weight": 1.0,
       "source": "ringkasan_model_validation_vs_real_batches",
       "target": "pra5_myr_model_notebook"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "Python/myr_simulation/_notebook_md/dataprep_rx_kinetic.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_dataprep_rx_kinetic",
+      "target": "dataprep_rx_kinetic_notebook"
     },
     {
       "relation": "conceptually_related_to",
@@ -4967,6 +5404,36 @@
       "target": "three_compartment_hydrodynamics_model"
     },
     {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_kinetic_model",
+      "target": "ds_pool_kinetic_model_notebook"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_free_nm_fix",
+      "target": "optimized_hydrolysis_kinetic_model_dill"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_refined_kinetics.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l_refined",
+      "target": "optimized_hydrolysis_kinetic_model_dill"
+    },
+    {
       "relation": "conceptually_related_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -4974,6 +5441,26 @@
       "source_location": null,
       "weight": 1.0,
       "source": "optimized_hydrolysis_kinetic_model_dill",
+      "target": "hydrolysis_kinetic_model_30jul_dill"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_9species_fit_n_m_fixed",
+      "target": "hydrolysis_kinetic_model_30jul_dill"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_refined_kinetics.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l_opt",
       "target": "hydrolysis_kinetic_model_30jul_dill"
     },
     {
@@ -5345,6 +5832,266 @@
       "weight": 1.0,
       "source": "python_myr_simulation_figs_ringkasan_rans_5l_combined_fit_comparison",
       "target": "str_mass_transfer_project"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/dataprep_rx_kinetic.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_dataprep_rx_kinetic",
+      "target": "nbmd_hplc_gsheet_prep"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_kinetic_model",
+      "target": "nbmd_ds_pool_lumping_rationale"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_kinetic_model",
+      "target": "nbmd_ds_pool_network"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_kinetic_model",
+      "target": "nbmd_two_stage_de_fit"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model_Refined.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_kinetic_model_refined",
+      "target": "nbmd_ds_pool_kinetic_model"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Python/myr_simulation/_notebook_md/dataprep_rx_kinetic.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_hplc_gsheet_prep",
+      "target": "nbmd_ds_pool_kinetic_model"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model_Refined.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_kinetic_model_refined",
+      "target": "nbmd_aic_bic_comparison"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model_Refined.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_ds_pool_kinetic_model_refined",
+      "target": "nbmd_refine_widen_n_bound"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Python/myr_simulation/_notebook_md/dataprep_rx_kinetic.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_hplc_gsheet_prep",
+      "target": "nbmd_hydrolysis_kinetic_model"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_hydrolysis_kinetic_model",
+      "target": "nbmd_9species_fit_n_m_fixed"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_hydrolysis_kinetic_model_fixed",
+      "target": "nbmd_hydrolysis_kinetic_model"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Python/myr_simulation/_notebook_md/kinetika2.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_kinetika2",
+      "target": "nbmd_hydrolysis_kinetic_model"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_hydrolysis_kinetic_model_fixed",
+      "target": "nbmd_free_nm_fix"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/Kinetika.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_kinetika",
+      "target": "nbmd_3zone_fedbatch_engine"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/kinetika2.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_kinetika2",
+      "target": "nbmd_weighted_sse_two_stage"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l",
+      "target": "nbmd_3compartment_reactor"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l_opt",
+      "target": "nbmd_myr_mech_5l"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l_opt",
+      "target": "nbmd_feed_timing_opt"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_refined_kinetics.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l_refined",
+      "target": "nbmd_myr_mech_5l_opt"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l_opt_fixed",
+      "target": "nbmd_dspool_reactor_coupling"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l_opt_fixed",
+      "target": "nbmd_pump_stock_sweep"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_myr_mech_5l_opt_fixed",
+      "target": "nbmd_smooth_floor_1nM"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/DS_Pool_Kinetic_Model_Refined.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_refine_widen_n_bound",
+      "target": "nbmd_ds_pool_network"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Python/myr_simulation/_notebook_md/HydrolysisKineticModel_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_free_nm_fix",
+      "target": "nbmd_9species_fit_n_m_fixed"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized_FIXED.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_dspool_reactor_coupling",
+      "target": "nbmd_3compartment_reactor"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "Python/myr_simulation/_notebook_md/myr_mechanistic_model_5L_optimized.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nbmd_feed_timing_opt",
+      "target": "nbmd_3compartment_reactor"
     }
   ],
   "hyperedges": [
@@ -5408,5 +6155,5 @@
       "source_file": "Python/myr_simulation/grafik_Nq_vs_RPM.png"
     }
   ],
-  "built_at_commit": "537643721170aaa35cf14012b25a5951ddd4759d"
+  "built_at_commit": "df671ad0bfc2f63651eb3f0bee1697bc7f2ee303"
 }
